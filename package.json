@@ -1,0 +1,17 @@
+{
+  "name": "the-refuge-site",
+  "version": "1.0.0",
+  "description": "Premium website for The Refuge in Cotonou, Benin",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  }
+}

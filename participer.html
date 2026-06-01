@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participer — The Refuge</title>
+  <meta name="description" content="Soutenez l'action humanitaire de The Refuge à Cotonou : faites un don en ligne, devenez bénévole ou associez votre organisation à notre cause.">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Notification Banner -->
+  <div class="top-banner" id="top-banner">
+    <span class="top-banner-text"><i class="ph-bold ph-megaphone" style="margin-right: 6px; font-size: 14px; vertical-align: -1px; color: var(--color-coral);"></i> The Refuge a distribué 1 240+ repas ce mois-ci à Cotonou — <a href="impact.html">Voir l'impact</a></span>
+    <button class="top-banner-close" id="close-banner">&times;</button>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+          <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <span>The Refuge</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="mission.html" class="nav-link">Mission</a></li>
+        <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+        <li><a href="impact.html" class="nav-link">Impact</a></li>
+        <li><a href="participer.html" class="nav-link active">Participer</a></li>
+        <li><a href="about.html" class="nav-link">À Propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="participer.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Faire un don →</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="mission.html" class="mobile-nav-link">Mission</a></li>
+      <li><a href="programmes.html" class="mobile-nav-link">Programmes</a></li>
+      <li><a href="impact.html" class="mobile-nav-link">Impact</a></li>
+      <li><a href="participer.html" class="mobile-nav-link active">Participer</a></li>
+      <li><a href="about.html" class="mobile-nav-link">À Propos</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-cta-wrapper">
+      <a href="participer.html" class="btn btn-primary">Faire un don →</a>
+    </div>
+  </div>
+
+  <!-- Sub-page Hero -->
+  <section class="sub-hero">
+    <div class="container" style="position: relative; z-index: 3;">
+      <p class="text-label" style="color: var(--color-yellow-light);">AGIR ENSEMBLE</p>
+      <h1>Comment vous pouvez faire la différence</h1>
+      <p class="lead">Votre soutien, qu'il soit financier, humain ou spirituel, apporte de la vie à Cotonou.</p>
+    </div>
+    
+    <!-- Absolute Decorative Doodles -->
+    <div class="hero-doodles">
+      <img src="svgexport-1.svg" alt="Green doodle loop" class="doodle doodle-loop" style="top: 20%; right: 15%; opacity: 0.35;">
+      <img src="svgexport-2.svg" alt="Yellow doodle sparkle" class="doodle doodle-sparkle" style="top: 55%; left: 10%; opacity: 0.4;">
+    </div>
+  </section>
+
+  <!-- Section interactive de participation (Tabs) -->
+  <section class="bg-white-ref">
+    <div class="container">
+      <div class="tab-container">
+        
+        <!-- Tab Selectors -->
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="don">1. Faire un Don</button>
+          <button class="tab-btn" data-tab="benevolat">2. Devenir Bénévole</button>
+          <button class="tab-btn" data-tab="partenariat">3. Partenariats</button>
+        </div>
+
+        <!-- Tab 1: Faire un don -->
+        <div class="tab-pane active" id="don">
+          <div class="grid-2" style="gap: var(--space-12);">
+            
+            <div>
+              <p class="text-label">SOUTIEN FINANCIER</p>
+              <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Chaque don se transforme en repas et en soin.</h2>
+              <p style="margin-bottom: var(--space-4);">Votre don permet d'acheter directement les ingrédients de nos maraudes et de soutenir les projets de réinsertion professionnelle de nos bénéficiaires les plus stables.</p>
+              
+              <div class="verset-card" style="margin-bottom: var(--space-6);">
+                <p class="text-verset" style="font-size: 16px;">"Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte; car Dieu aime celui qui donne avec joie."</p>
+                <span class="verset-ref">2 Corinthiens 9:7</span>
+              </div>
+
+              <div class="contact-info-card" style="border-radius: var(--radius-md); padding: var(--space-4);">
+                <i class="ph ph-shield-check" style="font-size: 24px; color: var(--color-success); margin-top: 3px;"></i>
+                <div>
+                  <h3 style="font-family: var(--font-body); font-size: 14px; font-weight: 600;">Paiement sécurisé et local</h3>
+                  <p style="font-size: 13px; color: var(--color-muted);">En envoyant ce formulaire, vous serez redirigé vers notre plateforme sécurisée pour finaliser par Mobile Money (MTN, Moov) ou carte bancaire.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulaire don -->
+            <div class="contact-info-card" style="flex-direction: column; padding: var(--space-8); border-radius: var(--radius-xl);">
+              <form id="donation-form" class="interactive-form">
+                <input type="hidden" name="donation_type" id="donation-type" value="unique">
+                
+                <div class="form-group text-center">
+                  <label class="form-label" style="margin-bottom: var(--space-3);">Type de soutien</label>
+                  <div class="donation-toggle">
+                    <button type="button" class="donation-toggle-btn active" data-type="unique">Don unique</button>
+                    <button type="button" class="donation-toggle-btn" data-type="mensuel">Don mensuel</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Sélectionnez un montant (FCFA)</label>
+                  <div class="donation-grid">
+                    <button type="button" class="donation-preset-btn" data-amount="1000">1 000</button>
+                    <button type="button" class="donation-preset-btn" data-amount="2500">2 500</button>
+                    <button type="button" class="donation-preset-btn active" data-amount="5000">5 000</button>
+                    <button type="button" class="donation-preset-btn" data-amount="10000">10 000</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="donation-custom">Ou saisir un montant libre (FCFA)</label>
+                  <input type="number" class="form-control" id="donation-custom" placeholder="Saisir un montant...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="donation-name">Nom complet</label>
+                  <input type="text" class="form-control" id="donation-name" required placeholder="Votre nom complet...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="donation-email">Adresse e-mail</label>
+                  <input type="email" class="form-control" id="donation-email" required placeholder="votre.email@adresse.com">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-4);">Faire un don de 5 000 FCFA →</button>
+                
+                <div class="donation-note">
+                  <i class="ph ph-lock"></i>
+                  <span>Vos informations personnelles sont sécurisées.</span>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 2: Devenir Bénévole -->
+        <div class="tab-pane" id="benevolat">
+          <div class="grid-2" style="gap: var(--space-12);">
+            
+            <div>
+              <p class="text-label">ENGAGEMENT HUMAIN</p>
+              <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Rejoignez notre équipe de terrain à Cotonou.</h2>
+              <p style="margin-bottom: var(--space-4);">Nos bénévoles sont les mains et les pieds de The Refuge. Que vous sachiez cuisiner, que vous soyez doué pour l'écoute active, ou que vous aimiez trier et organiser des collectes, il y a une place pour vous dans notre équipe.</p>
+              
+              <div class="verset-card" style="margin-bottom: var(--space-6);">
+                <p class="text-verset" style="font-size: 16px;">"Servez-vous les uns les autres par amour."</p>
+                <span class="verset-ref">Galates 5:13</span>
+              </div>
+
+              <div class="contact-info-cards">
+                <div class="contact-info-card" style="border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: 0;">
+                  <i class="ph ph-users" style="font-size: 20px; color: var(--color-primary);"></i>
+                  <div>
+                    <h3 style="font-family: var(--font-body); font-size: 14px; font-weight: 600;">Intégration encadrée</h3>
+                    <p style="font-size: 13px; color: var(--color-muted);">Chaque nouveau bénévole effectue une première maraude de découverte accompagné par un équipier expérimenté.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulaire bénévole -->
+            <div class="contact-info-card" style="flex-direction: column; padding: var(--space-8); border-radius: var(--radius-xl);">
+              <form class="interactive-form">
+                <div class="form-group">
+                  <label class="form-label" for="vol-name">Nom complet</label>
+                  <input type="text" class="form-control" id="vol-name" required placeholder="Votre nom et prénom...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vol-email">Adresse e-mail</label>
+                  <input type="email" class="form-control" id="vol-email" required placeholder="votre.email@adresse.com">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vol-phone">Numéro de téléphone (WhatsApp)</label>
+                  <input type="tel" class="form-control" id="vol-phone" required placeholder="Ex: +229 97 00 00 00">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Disponibilités préférées</label>
+                  <div style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-1);">
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="checkbox" name="vol_avail" value="mercredi"> Mercredi soir (maraude)
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="checkbox" name="vol_avail" value="vendredi"> Vendredi après-midi (local d'accueil)
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="checkbox" name="vol_avail" value="dimanche"> Dimanche matin (culte & écoute)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Domaine d'action souhaité</label>
+                  <div style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-1);">
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="radio" name="vol_domain" value="cuisine" checked> Préparation des repas (cuisine)
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="radio" name="vol_domain" value="terrain"> Distribution sur le terrain (maraudes)
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="radio" name="vol_domain" value="ecoute"> Écoute active et soutien psycho-spirituel
+                    </label>
+                    <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
+                      <input type="radio" name="vol_domain" value="tri"> Tri de vêtements et collectes
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vol-message">Quelques mots sur vos motivations</label>
+                  <textarea class="form-control" id="vol-message" placeholder="Pourquoi souhaitez-vous nous rejoindre ?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-4);">Envoyer ma candidature →</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 3: Partenariats -->
+        <div class="tab-pane" id="partenariat">
+          <div class="grid-2" style="gap: var(--space-12);">
+            
+            <div>
+              <p class="text-label">COLLABORATION DURABLE</p>
+              <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Co-créons un impact durable pour Cotonou.</h2>
+              <p style="margin-bottom: var(--space-4);">Vous représentez une église locale, une entreprise engagée ou une autre association humanitaire ? Nous croyons fermement à la force de l'unité chrétienne et à la mutualisation des compétences pour lutter contre l'extrême précarité.</p>
+              
+              <div class="verset-card" style="margin-bottom: var(--space-6);">
+                <p class="text-verset" style="font-size: 16px;">"Deux valent mieux qu'un, parce qu'ils retirent un bon salaire de leur travail."</p>
+                <span class="verset-ref">Ecclésiaste 4:9</span>
+              </div>
+
+              <div class="contact-info-cards">
+                <div class="contact-info-card" style="border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: 0;">
+                  <i class="ph ph-handshake" style="font-size: 20px; color: var(--color-primary);"></i>
+                  <div>
+                    <h3 style="font-family: var(--font-body); font-size: 14px; font-weight: 600;">Types de collaboration</h3>
+                    <p style="font-size: 13px; color: var(--color-muted);">Mise à disposition de locaux, mécénat de compétences, collectes internes dans votre communauté ou financements conjoints.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulaire partenariat -->
+            <div class="contact-info-card" style="flex-direction: column; padding: var(--space-8); border-radius: var(--radius-xl);">
+              <form class="interactive-form">
+                <div class="form-group">
+                  <label class="form-label" for="partner-org">Nom de votre organisation (Église / Entreprise / ONG)</label>
+                  <input type="text" class="form-control" id="partner-org" required placeholder="Votre organisation...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="partner-name">Nom du contact référent</label>
+                  <input type="text" class="form-control" id="partner-name" required placeholder="Votre nom et prénom...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="partner-email">Adresse e-mail de contact</label>
+                  <input type="email" class="form-control" id="partner-email" required placeholder="contact@organisation.org">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="partner-phone">Numéro de téléphone</label>
+                  <input type="tel" class="form-control" id="partner-phone" required placeholder="Ex: +229 97 00 00 00">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="partner-type">Type de partenariat envisagé</label>
+                  <select class="form-control" id="partner-type">
+                    <option value="financement">Soutien financier / Parrainage de projet</option>
+                    <option value="dons-nature">Mise à disposition de matériel ou denrées (dons en nature)</option>
+                    <option value="competences">Mécénat de compétences (médical, psy, juridique)</option>
+                    <option value="eglise">Partenariat église (mobilisation de bénévoles, cultes conjoints)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="partner-message">Décrivez votre projet ou votre vision de collaboration</label>
+                  <textarea class="form-control" id="partner-message" placeholder="Votre message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-4);">Proposer un partenariat →</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Banner Section -->
+  <section class="footer-banner section-sm">
+    <div class="container footer-banner-content">
+      <h2 class="animate-on-scroll">Vous pouvez être la réponse à leur prière.</h2>
+      <div class="hero-ctas flex-center animate-on-scroll" style="gap: var(--space-4);">
+        <a href="participer.html" class="btn btn-primary">Faire un don maintenant →</a>
+        <a href="participer.html?tab=benevolat" class="btn btn-ghost">Rejoindre l'équipe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-left-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>Participer</h3>
+              <ul class="footer-links">
+                <li><a href="participer.html?tab=don">Faire un don</a></li>
+                <li><a href="participer.html?tab=benevolat">Devenir bénévole</a></li>
+                <li><a href="participer.html?tab=partenariat">Partenariats</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>En savoir plus</h3>
+              <ul class="footer-links">
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="mission.html">Mission & Vision</a></li>
+                <li><a href="programmes.html">Nos Programmes</a></li>
+                <li><a href="impact.html">Impact & Histoires</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Politiques</h3>
+              <ul class="footer-links">
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social-section">
+            <h3>Suivez-nous sur les réseaux</h3>
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-cta-card">
+          <h2>Faire un Don<br>Faire la Différence !</h2>
+          <p>Les dons soutiennent directement nos maraudes et projets d'insertion à Cotonou. Choisissez un don unique ou récurrent.</p>
+          <a href="participer.html" class="footer-cta-btn">FAIRE UN DON →</a>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-huge-logo">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="footer-huge-logo-icon">
+            <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+            <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>The Refuge</span>
+        </div>
+        <div class="footer-copyright">
+          Copyright &copy; 2026 The Refuge. Tous droits réservés.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

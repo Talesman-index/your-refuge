@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Refuge — Cotonou, Bénin</title>
+  <meta name="description" content="The Refuge est une organisation chrétienne humanitaire à Cotonou (Bénin) qui apporte aide matérielle, soutien spirituel et dignité aux personnes vulnérables.">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Notification Banner -->
+  <div class="top-banner" id="top-banner">
+    <span class="top-banner-text"><i class="ph-bold ph-megaphone" style="margin-right: 6px; font-size: 14px; vertical-align: -1px; color: var(--color-coral);"></i> The Refuge a distribué 1 240+ repas ce mois-ci à Cotonou — <a href="impact.html">Voir l'impact</a></span>
+    <button class="top-banner-close" id="close-banner">&times;</button>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+          <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <span>The Refuge</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="mission.html" class="nav-link">Mission</a></li>
+        <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+        <li><a href="impact.html" class="nav-link">Impact</a></li>
+        <li><a href="participer.html" class="nav-link">Participer</a></li>
+        <li><a href="about.html" class="nav-link">À Propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="participer.html" class="btn btn-primary">Faire un don →</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
+      <li><a href="mission.html" class="mobile-nav-link">Mission</a></li>
+      <li><a href="programmes.html" class="mobile-nav-link">Programmes</a></li>
+      <li><a href="impact.html" class="mobile-nav-link">Impact</a></li>
+      <li><a href="participer.html" class="mobile-nav-link">Participer</a></li>
+      <li><a href="about.html" class="mobile-nav-link">À Propos</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-cta-wrapper">
+      <a href="participer.html" class="btn btn-primary">Faire un don →</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1 — Hero -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Volontaires et bénéficiaires de Cotonou" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container" style="position: relative; z-index: 3;">
+      <div class="hero-content">
+
+        <h1 class="hero-title">
+          PERSONNE NE<br>
+          <span class="hero-underlined">
+            DEVRAIT VIVRE
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span><br>
+          LA VIE SEUL.
+        </h1>
+        <p>Nous sommes une organisation chrétienne humanitaire dédiée à apporter une aide matérielle, un accompagnement spirituel et de la dignité aux personnes les plus vulnérables à Cotonou.</p>
+        <div class="hero-ctas">
+          <a href="participer.html" class="btn btn-primary">Faire un don →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Absolute Decorative Doodles overlaying background -->
+    <div class="hero-doodles">
+      <img src="svgexport-3.svg" alt="Green doodle loop" class="doodle doodle-loop">
+      <img src="svgexport-2.svg" alt="Yellow doodle sparkle" class="doodle doodle-sparkle">
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Split Banner (Urgence & Preuve Sociale) -->
+  <section class="split-banner-section">
+    <div class="split-banner-container">
+      <!-- Left side (Yellow) -->
+      <div class="banner-left">
+        <img src="images/img2.jpg" alt="Distribution de repas" class="banner-left-img">
+        <div class="banner-left-content">
+          <h2>Aide alimentaire d'urgence à Cotonou</h2>
+          <div class="banner-stats">
+            Repas distribués : <strong>15 200</strong> / Objectif : <strong>20 000</strong>
+          </div>
+          <a href="programmes.html" class="btn btn-dark-green" style="padding: 10px 20px; font-size: 14px; width: fit-content;">En savoir plus →</a>
+        </div>
+      </div>
+      
+      <!-- Right side (Sage Green) -->
+      <div class="banner-right">
+        <h2>Faire un don aujourd'hui !</h2>
+        <form class="banner-input-wrapper" id="banner-donation-form">
+          <input type="number" class="banner-input" id="banner-amount" placeholder="Montant... Ex: 2 000 - 50 000 FCFA" required min="500">
+        </form>
+        <p class="banner-right-text">Les dons commencent à partir de 1 000 FCFA. Don unique ou soutien mensuel récurrent.</p>
+        <button type="button" class="btn btn-dark-green" id="banner-donate-btn" style="padding: 10px 20px; font-size: 14px; width: fit-content;">Faire un don →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Redesigned About Section (Screenshot 1) -->
+  <section class="bg-alt" style="border-top: 1px solid var(--color-border); padding-top: var(--section-padding-y-lg);">
+    <div class="container split-section">
+      <!-- Text content on the LEFT -->
+      <div class="split-content animate-on-scroll">
+        <p class="text-label about-label">À PROPOS DE THE REFUGE</p>
+        <h2 class="about-title">
+          LE VRAI CHANGEMENT<br>
+          S'ÉCRIT AVEC
+          <span class="hero-underlined">
+            CONSTANCE.
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="lead">The Refuge est une organisation à but non lucratif engagée à créer un impact durable à Cotonou en reliant la compassion à des actions de terrain concrètes, fidèles et quotidiennes.</p>
+        
+        <!-- Checklist with Checkbox Icons instead of emojis -->
+        <ul class="about-check-list">
+          <li class="about-check-item">
+            <span class="about-check-icon"><i class="ph ph-check-bold"></i></span>
+            Aide alimentaire d'urgence & nutritionnelle
+          </li>
+          <li class="about-check-item">
+            <span class="about-check-icon"><i class="ph ph-check-bold"></i></span>
+            Programmes d'éducation & réinsertion active
+          </li>
+        </ul>
+
+        <a href="about.html" class="btn-dark-pill">EN SAVOIR PLUS →</a>
+      </div>
+
+      <!-- Image on the RIGHT (Mockup visual curve) -->
+      <div class="split-img-wrapper animate-on-scroll" style="border-radius: 48px; box-shadow: var(--shadow-md);">
+        <img src="images/img1.jpg" alt="Distribution de repas chaud par l'équipe" class="split-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Redesigned Programs Section (Screenshot 2) -->
+  <section class="bg-sage">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto var(--space-12) auto;">
+        <p class="text-label" style="color: var(--color-coral) !important;">NOS ACTIONS TERRAIN</p>
+        <h2 style="text-transform: uppercase; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          BÂTIR UN MEILLEUR<br>
+          <span class="hero-underlined">
+            AVENIR.
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-muted" style="color: #1A1410 !important; opacity: 0.85;">Nous sommes une organisation à but non lucratif engagée à créer un impact durable en soutenant les communautés de Cotonou.</p>
+      </div>
+
+      <!-- 3-column Grid of White Rounded Cards matching Careloop exactly -->
+      <div class="grid-3">
+        <!-- Card 1: Repas -->
+        <div class="program-framer-card animate-on-scroll">
+          <div class="program-framer-img-wrapper">
+            <img src="images/img2.jpg" alt="Distribution de repas chauds" class="program-framer-img">
+          </div>
+          <h3 class="program-framer-title">DISTRIBUTION DE REPAS & PROGRAMMES NUTRITIONNELS.</h3>
+          <p class="program-framer-desc">Fournir des repas chauds hebdomadaires et un soutien nutritionnel pour redonner de la force physique aux sans-abri de Cotonou...</p>
+          <div class="program-framer-progress-container">
+            <div class="program-framer-stats-text">Financé: <strong>15 200 repas</strong> de <strong>20 000</strong> Goal</div>
+            <div class="program-framer-bar-track">
+              <div class="program-framer-bar-fill" style="width: 76%;"></div>
+            </div>
+          </div>
+          <a href="participer.html" class="program-framer-btn">SOUTENIR CE PROGRAMME →</a>
+        </div>
+
+        <!-- Card 2: Soutien -->
+        <div class="program-framer-card animate-on-scroll" style="transition-delay: 80ms;">
+          <div class="program-framer-img-wrapper">
+            <img src="images/img4.jpg" alt="Accompagnement psycho-spirituel" class="program-framer-img">
+          </div>
+          <h3 class="program-framer-title">ACCOMPAGNEMENT PSYCHO-SPIRITUEL ET LIEN SOCIAL.</h3>
+          <p class="program-framer-desc">Restaurer l'estime de soi, briser l'isolement de la rue et offrir une écoute attentive basée sur l'amour fraternel...</p>
+          <div class="program-framer-progress-container">
+            <div class="program-framer-stats-text">Réalisé: <strong>82 heures</strong> de <strong>120 heures</strong> Target</div>
+            <div class="program-framer-bar-track">
+              <div class="program-framer-bar-fill" style="width: 68%;"></div>
+            </div>
+          </div>
+          <a href="participer.html" class="program-framer-btn">SOUTENIR CE PROGRAMME →</a>
+        </div>
+
+        <!-- Card 3: Réinsertion -->
+        <div class="program-framer-card animate-on-scroll" style="transition-delay: 160ms;">
+          <div class="program-framer-img-wrapper">
+            <img src="images/img6.jpg" alt="Réinsertion active" class="program-framer-img">
+          </div>
+          <h3 class="program-framer-title">FORMATION PROFESSIONNELLE ET RÉINSERTION ACTIVE.</h3>
+          <p class="program-framer-desc">Accompagner individuellement vers l'emploi et l'indépendance pour sortir durablement de la précarité urbaine...</p>
+          <div class="program-framer-progress-container">
+            <div class="program-framer-stats-text">Réinsérés: <strong>12 personnes</strong> de <strong>15</strong> Achieved</div>
+            <div class="program-framer-bar-track">
+              <div class="program-framer-bar-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+          <a href="participer.html" class="program-framer-btn">SOUTENIR CE PROGRAMME →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Redesigned Impact Section (Screenshot 3) -->
+  <section class="bg-forest-dark section-lg" style="position: relative; overflow: hidden;">
+    <!-- Background shape SVG overlay -->
+    <img src="Background Shape.svg" alt="" class="impact-bg-shape">
+
+    <div class="container split-section-impact" style="position: relative; z-index: 2;">
+      <!-- Left side: content + sparkle doodle -->
+      <div class="animate-on-scroll" style="position: relative;">
+        <span class="impact-surtitre">NOTRE IMPACT</span>
+        <h2 class="impact-title">
+          NOTRE IMPACT<br>
+          GRANDISSANT PROUVE<br>
+          NOTRE
+          <span class="hero-underlined">
+            CONSTANCE.
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="impact-desc">Nous sommes une organisation à but non lucratif dédiée à créer un changement durable en soutenant les communautés de Cotonou.</p>
+        
+        <!-- Green doodle loop inline -->
+        <img src="svgexport-3.svg" alt="Green doodle loop" class="doodle-loop-inline">
+      </div>
+
+      <!-- Right side: staggered bar chart columns (Short, Medium, Tall order) -->
+      <div class="impact-bars-container animate-on-scroll" style="position: relative;">
+        <!-- Sparkle Doodle inline positioned between text and columns -->
+        <img src="svgexport-2.svg" alt="Yellow sparkle" class="doodle-sparkle-inline">
+
+        <!-- Bar 1 (Short) -->
+        <div class="impact-bar-col bar-short">
+          <div class="impact-bar-number"><span class="count-up" data-target="1240">0</span>+</div>
+          <p class="impact-bar-label">Bénéficiaires accueillis et aidés depuis le début</p>
+        </div>
+        <!-- Bar 2 (Medium) -->
+        <div class="impact-bar-col bar-medium">
+          <div class="impact-bar-number"><span class="count-up" data-target="5000">0</span>+</div>
+          <p class="impact-bar-label">Kits d'hygiène et vêtements propres offerts</p>
+        </div>
+        <!-- Bar 3 (Tall) -->
+        <div class="impact-bar-col bar-tall">
+          <div class="impact-bar-number"><span class="count-up" data-target="15200">0</span>+</div>
+          <p class="impact-bar-label">Repas chauds distribués lors de nos maraudes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Comment participer (Screenshot 1: WAYS YOU CAN MAKE A DIFFERENCE) -->
+  <section class="bg-alt" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto var(--space-12) auto;">
+        <p class="text-label" style="color: var(--color-coral) !important;">COMMENT PARTICIPER</p>
+        <h2 style="text-transform: uppercase; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          COMMENT VOUS POUVEZ<br>
+          <span class="hero-underlined">
+            FAIRE LA DIFFÉRENCE.
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-muted">Créer un changement significatif est un effort partagé. Que ce soit par votre temps, vos compétences ou votre soutien financier.</p>
+      </div>
+
+      <div class="grid-3" style="gap: var(--space-6);">
+        <!-- Card 1 -->
+        <div class="way-framer-card animate-on-scroll">
+          <div class="way-framer-badge" style="background-color: #593c47;">
+            <i class="ph ph-hand-coins"></i>
+          </div>
+          <h3 class="way-framer-title">Faire un don</h3>
+          <p class="way-framer-desc">Votre don soutient directement les programmes de The Refuge, aidant à fournir de la nourriture, des soins de santé, de l'éducation et une assistance d'urgence.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="way-framer-card animate-on-scroll" style="transition-delay: 40ms;">
+          <div class="way-framer-badge" style="background-color: #ff5722;">
+            <i class="ph ph-hand-heart"></i>
+          </div>
+          <h3 class="way-framer-title">Devenir bénévole</h3>
+          <p class="way-framer-desc">Rejoignez notre équipe de bénévoles dévoués pour faire une différence dans votre communauté grâce à un soutien pratique.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="way-framer-card animate-on-scroll" style="transition-delay: 80ms;">
+          <div class="way-framer-badge" style="background-color: #35536b;">
+            <i class="ph ph-user"></i>
+          </div>
+          <h3 class="way-framer-title">Parrainer un frère</h3>
+          <p class="way-framer-desc">En parrainant un frère, vous pouvez l'aider à obtenir les ressources dont il a besoin pour s'épanouir et réussir sa réinsertion.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="way-framer-card animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="way-framer-badge" style="background-color: #6c5e37;">
+            <i class="ph ph-gift"></i>
+          </div>
+          <h3 class="way-framer-title">Don en nature</h3>
+          <p class="way-framer-desc">Offrez des vêtements propres, des matelas, des denrées sèches ou du matériel d'hygiène.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="way-framer-card animate-on-scroll" style="transition-delay: 160ms;">
+          <div class="way-framer-badge" style="background-color: #42315f;">
+            <i class="ph ph-share-network"></i>
+          </div>
+          <h3 class="way-framer-title">Partager la mission</h3>
+          <p class="way-framer-desc">Faites connaître les réalités de la rue à Cotonou et devenez un porte-voix pour la cause.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="way-framer-card animate-on-scroll" style="transition-delay: 200ms;">
+          <div class="way-framer-badge" style="background-color: #374d2b;">
+            <i class="ph ph-calendar-star"></i>
+          </div>
+          <h3 class="way-framer-title">Partenariat pro</h3>
+          <p class="way-framer-desc">Églises, entreprises, ONG : co-créons des projets d'insertion pour un impact durable.</p>
+        </div>
+      </div>
+      
+      <div class="text-center" style="margin-top: var(--space-16);">
+        <a href="participer.html" class="btn btn-primary">Commencer à agir →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — Témoignages (Screenshot 3: WHAT PEOPLE SAY ABOUT OUR WORK) -->
+  <section class="bg-white-ref">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto var(--space-12) auto;">
+        <p class="text-label" style="color: var(--color-coral) !important;">TÉMOIGNAGES</p>
+        <h2 style="text-transform: uppercase; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          CE QUE LES GENS DISENT<br>
+          <span class="hero-underlined">
+            DE NOTRE MISSION.
+            <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 Q 50 2, 97 5" stroke="var(--color-yellow)" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-muted">Créer un changement significatif est un effort partagé. Que ce soit par votre temps, vos compétences ou votre soutien financier.</p>
+      </div>
+
+      <div class="grid-3" style="gap: var(--space-6); align-items: stretch;">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-framer-card animate-on-scroll">
+          <div class="testimonial-framer-left">
+            <p class="testimonial-framer-quote">J'ai trouvé une vraie famille, des cœurs restaurés et un sens profond donné à ma foi sur le terrain.</p>
+            <div class="testimonial-framer-author">
+              <img src="images/adjoua.png" alt="Adjoua M." class="testimonial-framer-author-photo">
+              <div class="testimonial-framer-author-info">
+                <span class="testimonial-framer-name">Adjoua M.</span>
+                <span class="testimonial-framer-role">Bénévole depuis 2024 · Cotonou</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-framer-card animate-on-scroll" style="transition-delay: 80ms;">
+          <div class="testimonial-framer-left">
+            <p class="testimonial-framer-quote">Ils m'ont donné bien plus qu'un repas chaud : ils m'ont offert de l'écoute, de l'espoir et du respect.</p>
+            <div class="testimonial-framer-author">
+              <img src="images/brother.png" alt="Un frère de la rue" class="testimonial-framer-author-photo">
+              <div class="testimonial-framer-author-info">
+                <span class="testimonial-framer-name">Un frère de la rue</span>
+                <span class="testimonial-framer-role">Bénéficiaire anonyme · Cotonou</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-framer-card animate-on-scroll" style="transition-delay: 160ms;">
+          <div class="testimonial-framer-left">
+            <p class="testimonial-framer-quote">The Refuge incarne pleinement l'évangile en action. Leur dévouement quotidien est exemplaire.</p>
+            <div class="testimonial-framer-author">
+              <img src="images/pasteur.png" alt="Pasteur Kodjo" class="testimonial-framer-author-photo">
+              <div class="testimonial-framer-author-info">
+                <span class="testimonial-framer-name">Pasteur Kodjo</span>
+                <span class="testimonial-framer-role">Église Partenaire · Cotonou</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 8 — Stories / Articles récents -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="flex-between" style="margin-bottom: var(--space-10); flex-wrap: wrap; gap: var(--space-4);">
+        <div>
+          <p class="text-label">RÉCITS DU TERRAIN</p>
+          <h2 style="margin-top: var(--space-2);">Dernières nouvelles de la mission</h2>
+        </div>
+        <a href="impact.html#stories" class="btn btn-secondary">Voir toutes les histoires</a>
+      </div>
+
+      <div class="grid-3">
+        <!-- Story 1 -->
+        <article class="story-card animate-on-scroll">
+          <div class="story-img-wrapper">
+            <img src="images/img2.jpg" alt="Distribution de repas" class="story-img">
+          </div>
+          <div class="story-content">
+            <p class="text-label">RÉCIT</p>
+            <h3>La nuit où Marie a frappé à notre porte</h3>
+            <p>Retour sur le parcours d'une mère sans abri et comment une simple assiette chaude a ouvert le chemin de la réinsertion.</p>
+            <a href="impact.html#story-marie" class="btn-link" style="margin-top: auto;">Lire la suite →</a>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="story-card animate-on-scroll" style="transition-delay: 80ms;">
+          <div class="story-img-wrapper">
+            <img src="images/img5.jpg" alt="Maraude nocturne" class="story-img">
+          </div>
+          <div class="story-content">
+            <p class="text-label">IMPACT</p>
+            <h3>50 repas distribués un dimanche matin</h3>
+            <p>Compte-rendu de notre dernière maraude dans le quartier de Jonquet. Une mobilisation exceptionnelle de nos jeunes bénévoles.</p>
+            <a href="impact.html#story-maraude" class="btn-link" style="margin-top: auto;">Lire la suite →</a>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="story-card animate-on-scroll" style="transition-delay: 160ms;">
+          <div class="story-img-wrapper">
+            <img src="images/img4.jpg" alt="Étude biblique" class="story-img">
+          </div>
+          <div class="story-content">
+            <p class="text-label">RÉFLEXION</p>
+            <h3>Ce que Luc 9:13 signifie pour nous</h3>
+            <p>Une méditation sur l'appel du Christ à agir concrètement face à la précarité urbaine, au-delà des mots et des discours.</p>
+            <a href="impact.html#story-luc" class="btn-link" style="margin-top: auto;">Lire la suite →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — FAQ -->
+  <section class="bg-white-ref">
+    <div class="container">
+      <div class="faq-section-inner">
+
+        <!-- LEFT: Title + CTA -->
+        <div class="faq-left animate-on-scroll">
+          <p class="text-label">FOIRE AUX QUESTIONS</p>
+          <h2>Questions<br>et réponses</h2>
+          <p>Trouvez des réponses rapides sur le fonctionnement de l'association, la transparence de vos dons et l'aide sur le terrain.</p>
+          <a href="contact.html" class="btn btn-dark-pill" style="margin-top: var(--space-8);">Nous contacter →</a>
+        </div>
+
+        <!-- RIGHT: Accordion -->
+        <div class="faq-container">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-trigger">
+              <span>Comment mon don est-il utilisé ?</span>
+              <div class="faq-icon-wrap">
+                <i class="ph ph-plus faq-icon"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p>Chaque don est alloué en priorité à l'achat de denrées alimentaires, de produits d'hygiène et de vêtements pour les maraudes. Une part minime est consacrée à la logistique de distribution. Nous garantissons une transparence financière totale avec des rapports annuels publiés sur notre page Impact.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-trigger">
+              <span>Puis-je venir aider directement sur le terrain ?</span>
+              <div class="faq-icon-wrap">
+                <i class="ph ph-plus faq-icon"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p>Oui, absolument ! Nous accueillons avec joie les bénévoles pour nos maraudes du weekend ou nos ateliers d'écoute. Vous pouvez remplir le formulaire d'intérêt sur la page "Participer", et un membre de l'équipe vous contactera pour une session d'accueil.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-trigger">
+              <span>The Refuge est-il une organisation officielle ?</span>
+              <div class="faq-icon-wrap">
+                <i class="ph ph-plus faq-icon"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p>Oui, The Refuge est une organisation à but non lucratif officiellement enregistrée auprès des autorités de la République du Bénin. Nous travaillons en collaboration avec les représentants locaux et d'autres églises partenaires à Cotonou.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-trigger">
+              <span>Comment une personne en détresse peut-elle recevoir de l'aide ?</span>
+              <div class="faq-icon-wrap">
+                <i class="ph ph-plus faq-icon"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p>Nos équipes parcourent les rues de Cotonou lors des maraudes hebdomadaires. Nous accueillons également les personnes en situation de précarité lors de nos points d'accueil physiques pour des repas, des vêtements ou une écoute fraternelle sans aucune distinction.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-trigger">
+              <span>Comment mon entreprise ou mon église peut-elle devenir partenaire ?</span>
+              <div class="faq-icon-wrap">
+                <i class="ph ph-plus faq-icon"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p>Vous pouvez nous écrire via notre formulaire sur la page "Participer" (onglet Partenariat) ou nous envoyer directement un e-mail à l'adresse contact@therefugebj.org. Nous serons ravis de discuter d'un cadre de collaboration adapté à votre vision.</p>
+            </div>
+          </div>
+
+        </div><!-- end .faq-container -->
+      </div><!-- end .faq-section-inner -->
+    </div>
+  </section>
+
+
+  <!-- SECTION 10 — CTA Final (Footer Banner) & Footer -->
+  <section class="footer-banner section-sm">
+    <div class="container footer-banner-content">
+      <h2 class="animate-on-scroll">Vous pouvez être la réponse à leur prière.</h2>
+      <div class="hero-ctas flex-center animate-on-scroll" style="gap: var(--space-4);">
+        <a href="participer.html" class="btn btn-primary">Faire un don maintenant →</a>
+        <a href="participer.html?tab=benevolat" class="btn btn-ghost">Rejoindre l'équipe</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-left-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>Participer</h3>
+              <ul class="footer-links">
+                <li><a href="participer.html?tab=don">Faire un don</a></li>
+                <li><a href="participer.html?tab=benevolat">Devenir bénévole</a></li>
+                <li><a href="participer.html?tab=partenariat">Partenariats</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>En savoir plus</h3>
+              <ul class="footer-links">
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="mission.html">Mission & Vision</a></li>
+                <li><a href="programmes.html">Nos Programmes</a></li>
+                <li><a href="impact.html">Impact & Histoires</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Politiques</h3>
+              <ul class="footer-links">
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social-section">
+            <h3>Suivez-nous sur les réseaux</h3>
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-cta-card">
+          <h2>Faire un Don<br>Faire la Différence !</h2>
+          <p>Les dons soutiennent directement nos maraudes et projets d'insertion à Cotonou. Choisissez un don unique ou récurrent.</p>
+          <a href="participer.html" class="footer-cta-btn">FAIRE UN DON →</a>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-huge-logo">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="footer-huge-logo-icon">
+            <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+            <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>The Refuge</span>
+        </div>
+        <div class="footer-copyright">
+          Copyright &copy; 2026 The Refuge. Tous droits réservés.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

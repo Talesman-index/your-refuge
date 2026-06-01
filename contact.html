@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez-nous — The Refuge</title>
+  <meta name="description" content="Contactez l'association The Refuge à Cotonou : écrivez-nous un message, trouvez notre adresse physique ou appelez notre ligne d'écoute active.">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Notification Banner -->
+  <div class="top-banner" id="top-banner">
+    <span class="top-banner-text"><i class="ph-bold ph-megaphone" style="margin-right: 6px; font-size: 14px; vertical-align: -1px; color: var(--color-coral);"></i> The Refuge a distribué 1 240+ repas ce mois-ci à Cotonou — <a href="impact.html">Voir l'impact</a></span>
+    <button class="top-banner-close" id="close-banner">&times;</button>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+          <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <span>The Refuge</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="mission.html" class="nav-link">Mission</a></li>
+        <li><a href="programmes.html" class="nav-link">Programmes</a></li>
+        <li><a href="impact.html" class="nav-link">Impact</a></li>
+        <li><a href="participer.html" class="nav-link">Participer</a></li>
+        <li><a href="about.html" class="nav-link">À Propos</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="participer.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Faire un don →</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="mission.html" class="mobile-nav-link">Mission</a></li>
+      <li><a href="programmes.html" class="mobile-nav-link">Programmes</a></li>
+      <li><a href="impact.html" class="mobile-nav-link">Impact</a></li>
+      <li><a href="participer.html" class="mobile-nav-link">Participer</a></li>
+      <li><a href="about.html" class="mobile-nav-link">À Propos</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+    </ul>
+    <div class="mobile-cta-wrapper">
+      <a href="participer.html" class="btn btn-primary">Faire un don →</a>
+    </div>
+  </div>
+
+  <!-- Sub-page Hero -->
+  <section class="sub-hero">
+    <div class="container" style="position: relative; z-index: 3;">
+      <p class="text-label" style="color: var(--color-yellow-light);">NOUS ÉCRIRE</p>
+      <h1>Contactez The Refuge</h1>
+      <p class="lead">Une question, un projet ou besoin de parler ? Nos équipes vous répondent avec joie.</p>
+    </div>
+    
+    <!-- Absolute Decorative Doodles -->
+    <div class="hero-doodles">
+      <img src="svgexport-1.svg" alt="Green doodle loop" class="doodle doodle-loop" style="top: 20%; right: 15%; opacity: 0.35;">
+      <img src="svgexport-2.svg" alt="Yellow doodle sparkle" class="doodle doodle-sparkle" style="top: 55%; left: 10%; opacity: 0.4;">
+    </div>
+  </section>
+
+  <!-- Section Contact (Form + Info) -->
+  <section class="bg-white-ref">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Info Cards & Map -->
+        <div class="contact-info-cards animate-on-scroll">
+          <p class="text-label">COORDONNÉES</p>
+          <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-6);">Où nous trouver ?</h2>
+          
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="ph ph-map-pin"></i></div>
+            <div class="contact-info-content">
+              <h3>Notre local d'accueil</h3>
+              <p>Cotonou, Bénin<br>Quartier Zongo, Rue 240 (proche marché Dantokpa)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="ph ph-phone"></i></div>
+            <div class="contact-info-content">
+              <h3>Téléphone (Écoute & Logistique)</h3>
+              <p>Ligne active de 9h à 18h : +229 97 00 00 00</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="ph ph-envelope"></i></div>
+            <div class="contact-info-content">
+              <h3>Adresse e-mail générale</h3>
+              <p>contact@therefugebj.org</p>
+            </div>
+          </div>
+
+          <!-- Stylized Local Map Embed (Simulation block) -->
+          <div class="contact-info-card" style="flex-direction: column; padding: 0; overflow: hidden; height: 240px; position: relative; border-radius: var(--radius-lg); margin-top: var(--space-4);">
+            <div style="width: 100%; height: 100%; background-color: var(--color-ivory-dark); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+              <i class="ph ph-compass animate-spin" style="font-size: 32px; color: var(--color-primary); margin-bottom: var(--space-2);"></i>
+              <h3 style="font-family: var(--font-body); font-size: 15px; font-weight: 600;">Plan d'accès — Cotonou Zongo</h3>
+              <p style="font-size: 12px; color: var(--color-muted); max-width: 250px; text-align: center; margin-top: 5px;">Intersection Rue 240 et Boulevard Delorme</p>
+              <a href="https://maps.google.com" target="_blank" class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px; margin-top: var(--space-3); border-radius: var(--radius-sm);">Ouvrir Google Maps</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="contact-info-card animate-on-scroll" style="flex-direction: column; padding: var(--space-8); border-radius: var(--radius-xl);">
+          <p class="text-label">FORMULAIRE</p>
+          <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-6);">Envoyer un message</h2>
+          
+          <form class="interactive-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Nom complet</label>
+              <input type="text" class="form-control" id="contact-name" required placeholder="Votre nom et prénom...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Adresse e-mail</label>
+              <input type="email" class="form-control" id="contact-email" required placeholder="votre.email@adresse.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Sujet du message</label>
+              <input type="text" class="form-control" id="contact-subject" required placeholder="De quoi s'agit-il ?">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Votre message</label>
+              <textarea class="form-control" id="contact-message" required placeholder="Écrivez votre message ici..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-4);">Envoyer mon message →</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Banner Section -->
+  <section class="footer-banner section-sm">
+    <div class="container footer-banner-content">
+      <h2 class="animate-on-scroll">Vous pouvez être la réponse à leur prière.</h2>
+      <div class="hero-ctas flex-center animate-on-scroll" style="gap: var(--space-4);">
+        <a href="participer.html" class="btn btn-primary">Faire un don maintenant →</a>
+        <a href="participer.html?tab=benevolat" class="btn btn-ghost">Rejoindre l'équipe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-left-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>Participer</h3>
+              <ul class="footer-links">
+                <li><a href="participer.html?tab=don">Faire un don</a></li>
+                <li><a href="participer.html?tab=benevolat">Devenir bénévole</a></li>
+                <li><a href="participer.html?tab=partenariat">Partenariats</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>En savoir plus</h3>
+              <ul class="footer-links">
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="mission.html">Mission & Vision</a></li>
+                <li><a href="programmes.html">Nos Programmes</a></li>
+                <li><a href="impact.html">Impact & Histoires</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Politiques</h3>
+              <ul class="footer-links">
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social-section">
+            <h3>Suivez-nous sur les réseaux</h3>
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-cta-card">
+          <h2>Faire un Don<br>Faire la Différence !</h2>
+          <p>Les dons soutiennent directement nos maraudes et projets d'insertion à Cotonou. Choisissez un don unique ou récurrent.</p>
+          <a href="participer.html" class="footer-cta-btn">FAIRE UN DON →</a>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-huge-logo">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="footer-huge-logo-icon">
+            <rect width="32" height="32" rx="6" fill="var(--color-coral)" />
+            <path d="M16 8v16M12 12h8" stroke="var(--color-white)" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>The Refuge</span>
+        </div>
+        <div class="footer-copyright">
+          Copyright &copy; 2026 The Refuge. Tous droits réservés.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
