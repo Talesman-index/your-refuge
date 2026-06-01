@@ -1511,10 +1511,13 @@ body.has-banner .sub-hero {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: var(--space-6) 0 0 0 !important;
+  }
   .footer-container {
     padding: 40px 24px !important;
     gap: 40px !important;
-    border-radius: 24px !important;
+    border-radius: 24px 24px 0 0 !important;
   }
   .footer-columns {
     grid-template-columns: 1fr !important;
