@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroAnimations();
   initSubHeroAnimations();
   initScrollAnimations();
+  initDonationEffects();
 });
 
 // Top Urgent Notification Banner
@@ -323,6 +324,11 @@ function showToast(message) {
   // Show toast
   setTimeout(() => toast.classList.add('show'), 100);
   
+  // Trigger celebratory confetti on donation/volunteer success!
+  if (message.includes('Merci') || message.includes('don') || message.includes('engagement')) {
+    triggerConfetti(0, 0, true);
+  }
+  
   // Hide toast after 4 seconds
   setTimeout(() => {
     toast.classList.remove('show');
@@ -551,4 +557,156 @@ function initSplitBannerForm() {
 
   if (form) form.addEventListener('submit', handleDonate);
   if (btn) btn.addEventListener('click', handleDonate);
+}
+
+// Donation Button click feedback & Confetti Animations
+function initDonationEffects() {
+  const donationSelectors = [
+    'a[href="participer.html"]',
+    'a[href*="participer.html?tab=don"]',
+    '.footer-cta-btn',
+    '#banner-donate-btn',
+    'button[type="submit"]'
+  ];
+
+  document.addEventListener('click', (e) => {
+    // Check if clicked element or its parent matches our selectors
+    const btn = e.target.closest(donationSelectors.join(', '));
+    if (!btn) return;
+
+    // Trigger local particle burst at click position
+    const x = e.clientX;
+    const y = e.clientY;
+    triggerConfetti(x, y, false); // Local click burst
+
+    // Button squish micro-animation using GSAP
+    gsap.to(btn, {
+      scale: 0.96,
+      duration: 0.1,
+      yoyo: true,
+      repeat: 1,
+      ease: "power1.inOut"
+    });
+
+    // If it's a link, delay navigation slightly to let the animation start
+    if (btn.tagName === 'A' && !e.metaKey && !e.ctrlKey && !e.shiftKey) {
+      e.preventDefault();
+      const href = btn.getAttribute('href');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    }
+  });
+
+  // Intercept the main donation form submission for a local burst on submit click
+  const donationForm = document.getElementById('donation-form');
+  if (donationForm) {
+    donationForm.addEventListener('submit', () => {
+      const submitBtn = donationForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        const rect = submitBtn.getBoundingClientRect();
+        const x = rect.left + rect.width / 2;
+        const y = rect.top + rect.height / 2;
+        triggerConfetti(x, y, false);
+      }
+    });
+  }
+}
+
+// Custom lightweight DOM/GSAP physics confetti particles system
+function triggerConfetti(clientX, clientY, isMassive = false) {
+  const container = document.createElement('div');
+  container.className = 'confetti-container';
+  container.style.position = 'fixed';
+  container.style.top = '0';
+  container.style.left = '0';
+  container.style.width = '100vw';
+  container.style.height = '100vh';
+  container.style.pointerEvents = 'none';
+  container.style.zIndex = '99999';
+  document.body.appendChild(container);
+
+  const colors = ['#ca1e73', '#cef38b', '#5e8900', '#FDDB22', '#7C4A2D'];
+  const shapes = ['circle', 'square', 'triangle', 'heart'];
+
+  if (isMassive) {
+    // Cannon from bottom left (shoots up and right)
+    createConfettiCannon(0, window.innerHeight, 50, container, colors, shapes);
+    // Cannon from bottom right (shoots up and left)
+    createConfettiCannon(window.innerWidth, window.innerHeight, 130, container, colors, shapes);
+  } else {
+    // Simple point explosion around the click coordinate
+    for (let i = 0; i < 30; i++) {
+      const angle = gsap.utils.random(0, Math.PI * 2);
+      createConfettiParticle(clientX, clientY, angle, container, colors, shapes, false);
+    }
+  }
+
+  setTimeout(() => {
+    container.remove();
+  }, 4000);
+}
+
+function createConfettiCannon(startX, startY, centerAngleDeg, container, colors, shapes) {
+  for (let i = 0; i < 50; i++) {
+    const angleRad = (centerAngleDeg + gsap.utils.random(-25, 25)) * Math.PI / 180;
+    createConfettiParticle(startX, startY, angleRad, container, colors, shapes, true);
+  }
+}
+
+function createConfettiParticle(startX, startY, angleRad, container, colors, shapes, isCannon) {
+  const particle = document.createElement('div');
+  const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  const size = gsap.utils.random(8, 16);
+  
+  particle.style.position = 'absolute';
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  particle.style.left = `${startX}px`;
+  particle.style.top = `${startY}px`;
+  particle.style.pointerEvents = 'none';
+  
+  if (shape === 'circle') {
+    particle.style.borderRadius = '50%';
+    particle.style.backgroundColor = color;
+  } else if (shape === 'square') {
+    particle.style.backgroundColor = color;
+  } else if (shape === 'triangle') {
+    particle.style.width = '0';
+    particle.style.height = '0';
+    particle.style.borderLeft = `${size / 2}px solid transparent`;
+    particle.style.borderRight = `${size / 2}px solid transparent`;
+    particle.style.borderBottom = `${size}px solid ${color}`;
+  } else if (shape === 'heart') {
+    particle.innerHTML = `<svg viewBox="0 0 24 24" fill="${color}" width="100%" height="100%"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+  }
+  
+  container.appendChild(particle);
+  
+  const velocity = isCannon ? gsap.utils.random(350, 750) : gsap.utils.random(80, 250);
+  const destX = Math.cos(angleRad) * velocity;
+  const destY = Math.sin(angleRad) * (isCannon ? -velocity : velocity) - (isCannon ? 100 : 50); // always push slightly upwards
+  
+  // Custom gravity simulation with GSAP
+  gsap.to(particle, {
+    x: `+=${destX}`,
+    y: `+=${destY}`,
+    rotation: gsap.utils.random(-720, 720),
+    scale: gsap.utils.random(0.3, 1),
+    duration: isCannon ? gsap.utils.random(1.6, 2.8) : gsap.utils.random(0.8, 1.6),
+    ease: "power2.out"
+  });
+  
+  // Apply gravity effect pulling particles down
+  gsap.to(particle, {
+    y: `+=${isCannon ? gsap.utils.random(400, 700) : gsap.utils.random(120, 220)}`,
+    opacity: 0,
+    duration: isCannon ? gsap.utils.random(1.6, 2.8) : gsap.utils.random(0.8, 1.6),
+    ease: "sine.in",
+    delay: isCannon ? 0.35 : 0.15,
+    onComplete: () => {
+      particle.remove();
+    }
+  });
 }
