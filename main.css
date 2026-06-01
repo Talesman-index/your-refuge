@@ -55,6 +55,7 @@
   --color-black:          #1A1410;
   --color-white:          #FDFAF6;
   --color-olive:          #5e8900;
+  --color-olive-dark:     #4d7000;
   --color-olive-light:    #cef38b;
   --color-muted:          #8C7B6B;
   --color-border:         #D4C9B8;
@@ -1318,7 +1319,7 @@ body.has-banner .sub-hero {
 }
 
 .footer-container {
-  background-color: var(--color-olive) !important; /* Vert 2: #5e8900 */
+  background-color: var(--color-olive-dark) !important; /* Vert 2 Dark: #4d7000 for WCAG AA contrast compliance */
   border-radius: 40px !important; /* Very rounded corners matching mockup */
   max-width: var(--container-max) !important;
   margin: 0 auto !important;
@@ -1366,7 +1367,7 @@ body.has-banner .sub-hero {
 }
 
 .footer-links a {
-  color: rgba(253, 250, 246, 0.75) !important; /* Off-white color with opacity */
+  color: var(--color-white) !important; /* Fully opaque off-white for WCAG AA contrast compliance */
   text-decoration: none !important;
   font-family: var(--font-body) !important;
   font-size: 14px !important;
@@ -1442,7 +1443,7 @@ body.has-banner .sub-hero {
   font-size: 14px !important;
   font-weight: 700 !important;
   line-height: 20px !important;
-  color: rgba(253, 250, 246, 0.7) !important;
+  color: var(--color-white) !important; /* Fully opaque off-white for WCAG AA contrast compliance */
 }
 
 .footer-cta-btn {
@@ -1499,8 +1500,8 @@ body.has-banner .sub-hero {
 .footer-copyright {
   font-family: var(--font-body) !important;
   font-size: 12px !important;
-  font-weight: 400 !important;
-  color: rgba(253, 250, 246, 0.4) !important;
+  font-weight: 500 !important; /* Slightly bolder for legibility */
+  color: var(--color-white) !important; /* Fully opaque off-white for WCAG AA contrast compliance */
   margin-bottom: var(--space-2) !important;
 }
 
@@ -2051,8 +2052,8 @@ textarea.form-control {
 
 /* Left Yellow Side */
 .banner-left {
-  background-color: var(--color-olive-light); /* Vert 1: #cef38b */
-  color: #1A1410;
+  background-color: var(--color-olive-dark); /* Vert 2 Dark: #4d7000 */
+  color: var(--color-white);
   padding: var(--space-10) var(--space-8);
   display: flex;
   align-items: center;
@@ -2087,25 +2088,25 @@ textarea.form-control {
   font-weight: 900;
   line-height: 1.15;
   text-transform: uppercase;
-  color: #1A1410;
+  color: var(--color-white);
   letter-spacing: -0.01em;
 }
 
 .banner-stats {
   font-family: var(--font-body);
   font-size: 15px;
-  color: rgba(26, 20, 16, 0.85);
+  color: rgba(253, 250, 246, 0.85);
   margin-bottom: var(--space-2);
 }
 
 .banner-stats strong {
-  color: #1A1410;
+  color: var(--color-white);
   font-weight: 700;
 }
 
 /* Right Light Green Side */
 .banner-right {
-  background-color: #C6DEAD; /* Sage green color matching Careloop */
+  background-color: var(--color-olive-light); /* Vert 1: #cef38b */
   color: #1A1410;
   padding: var(--space-10) var(--space-8);
   display: flex;
@@ -2159,7 +2160,7 @@ textarea.form-control {
 }
 
 .banner-input::placeholder {
-  color: rgba(26, 20, 16, 0.5);
+  color: rgba(26, 20, 16, 0.62); /* Darkened for WCAG AA compliance */
   font-weight: 400;
 }
 
@@ -2185,6 +2186,19 @@ textarea.form-control {
   background-color: var(--color-olive-light);
   color: var(--color-black);
   box-shadow: 0 4px 16px rgba(94, 137, 0, 0.25);
+}
+
+/* Light Green Button for split banner */
+.btn-light-green {
+  background-color: var(--color-olive-light);
+  color: var(--color-black);
+  border: none;
+}
+
+.btn-light-green:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  box-shadow: 0 4px 16px rgba(253, 250, 246, 0.2);
 }
 
 /* Redesigned Section 3 (About) Styles */

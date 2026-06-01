@@ -54,6 +54,7 @@ L'esthétique générale : **éditoriale humaniste**. Ni institutionnel froid, n
 
 ```
 --color-olive:         #5e8900   /* Vert 2 (sombre) — espoir, action, vie */
+--color-olive-dark:    #4d7000   /* Vert 2 sombre — contrastes, footers */
 --color-olive-light:   #cef38b   /* Vert 1 (clair) — accent secondaire, hovers */
 ```
 
@@ -512,6 +513,7 @@ background: linear-gradient(
   --color-black:          #1A1410;
   --color-white:          #FDFAF6;
   --color-olive:          #5e8900;
+  --color-olive-dark:     #4d7000;
   --color-olive-light:    #cef38b;
   --color-muted:          #8C7B6B;
   --color-border:         #D4C9B8;
