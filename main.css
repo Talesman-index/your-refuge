@@ -392,7 +392,7 @@ h5 {
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 96px;
   background-color: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -406,14 +406,14 @@ body.has-banner .header {
   top: 36px;
 }
 body.has-banner .hero {
-  padding-top: 136px;
+  padding-top: 160px;
 }
 body.has-banner .sub-hero {
-  padding-top: 176px;
+  padding-top: 196px;
 }
 
 .header.scrolled {
-  height: 64px;
+  height: 72px;
   background-color: rgba(26, 20, 16, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -431,21 +431,22 @@ body.has-banner .sub-hero {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-family: var(--font-display);
-  font-size: var(--text-h4);
-  font-weight: 700;
-  color: var(--color-white);
 }
 
-.logo svg {
-  height: 32px;
-  width: 32px;
-  fill: var(--color-yellow);
-  transition: fill var(--transition-base);
+.logo-img {
+  height: 72px;
+  width: auto;
+  display: block;
+  transition: height var(--transition-base), transform var(--transition-spring), opacity var(--transition-fast);
 }
 
-.logo:hover svg {
-  fill: var(--color-white);
+.header.scrolled .logo-img {
+  height: 56px;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .nav-links {
@@ -1483,22 +1484,15 @@ body.has-banner .sub-hero {
   gap: var(--space-4) !important;
 }
 
-.footer-huge-logo-icon {
-  width: 64px !important;
-  height: 64px !important;
-  border-radius: 16px !important;
-  background-color: var(--color-white) !important;
-  padding: var(--space-2) !important;
-  flex-shrink: 0 !important;
+.footer-logo-img {
+  height: 96px !important;
+  width: auto !important;
+  display: block !important;
+  transition: transform var(--transition-spring);
 }
 
-.footer-huge-logo span {
-  font-family: var(--font-display) !important;
-  font-size: clamp(36px, 6vw, 84px) !important;
-  color: #FDDB22 !important;
-  line-height: 1 !important;
-  letter-spacing: -0.02em !important;
-  text-transform: uppercase !important;
+.footer-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .footer-copyright {
