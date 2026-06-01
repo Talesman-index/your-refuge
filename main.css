@@ -2051,7 +2051,7 @@ textarea.form-control {
 
 /* Left Yellow Side */
 .banner-left {
-  background-color: #FDDB22; /* Yellow color matching Careloop */
+  background-color: var(--color-olive-light); /* Vert 1: #cef38b */
   color: #1A1410;
   padding: var(--space-10) var(--space-8);
   display: flex;
