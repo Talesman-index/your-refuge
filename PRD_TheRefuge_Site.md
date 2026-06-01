@@ -307,7 +307,7 @@ Carte 3 : "Ce que Luc 9:13 signifie pour nous, concrètement"
 | **Secondaire** | Or chaud `#C9963A` |
 | **Neutre clair** | Ivoire `#F5F0E8` |
 | **Neutre sombre** | Noir profond `#1A1410` |
-| **Accent** | Vert olive discret `#6B7C4A` |
+| **Accent** | Vert 2 `#5e8900` |
 | **Typographie titre** | Serif expressif (ex. Playfair Display, Cormorant Garamond) |
 | **Corps** | Sans-serif lisible (ex. DM Sans, Plus Jakarta Sans) |
 

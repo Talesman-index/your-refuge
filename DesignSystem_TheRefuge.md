@@ -50,14 +50,21 @@ L'esthétique générale : **éditoriale humaniste**. Ni institutionnel froid, n
 --color-white:         #FDFAF6   /* Blanc chaud — jamais blanc pur */
 ```
 
-### 2.4 Secondaire / Accent discret
+### 2.4 Accent discret (vert 2)
 
 ```
---color-olive:         #6B7C4A   /* Vert olive — espoir, nature, vie */
---color-olive-light:   #8FA06A   /* Variante hover */
+--color-olive:         #5e8900   /* Vert 2 — espoir, action, vie */
+--color-olive-light:   #73a600   /* Variante hover */
 ```
 
-### 2.5 Sémantique (UI)
+### 2.5 Accent dynamique (rose)
+
+```
+--color-coral:         #ca1e73   /* Rose dynamique — boutons, labels d'urgence */
+--color-coral-hover:   #b01362   /* Variante hover */
+```
+
+### 2.6 Sémantique (UI)
 
 ```
 --color-success:       #4A7C59   /* Confirmation don, succès formulaire */
@@ -66,7 +73,7 @@ L'esthétique générale : **éditoriale humaniste**. Ni institutionnel froid, n
 --color-border:        #D4C9B8   /* Bordures légères */
 ```
 
-### 2.6 Usage des couleurs
+### 2.7 Usage des couleurs
 
 | Rôle | Couleur |
 |---|---|
@@ -77,6 +84,8 @@ L'esthétique générale : **éditoriale humaniste**. Ni institutionnel froid, n
 | Texte sur fond sombre | `--color-white` |
 | CTA primaire (bouton) | `--color-yellow` + texte `--color-black` |
 | CTA secondaire (outline) | Bordure `--color-primary` + texte `--color-primary` |
+| Boutons d'action / Urgence | Fond `--color-coral` (Rose) + texte `--color-white` |
+| Accent discret | `--color-olive` (Vert 2) |
 | Accent / highlight | `--color-yellow-light` |
 | Versets bibliques | `--color-yellow-dark` en italique |
 
@@ -502,12 +511,14 @@ background: linear-gradient(
   --color-charcoal:       #2C1F14;
   --color-black:          #1A1410;
   --color-white:          #FDFAF6;
-  --color-olive:          #6B7C4A;
-  --color-olive-light:    #8FA06A;
+  --color-olive:          #5e8900;
+  --color-olive-light:    #73a600;
   --color-muted:          #8C7B6B;
   --color-border:         #D4C9B8;
   --color-success:        #4A7C59;
   --color-error:          #A03030;
+  --color-coral:          #ca1e73;
+  --color-coral-hover:    #b01362;
 
   /* Typographie */
   --font-display: 'Bayon';
