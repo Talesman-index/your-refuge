@@ -55,7 +55,6 @@
   --color-black:          #1A1410;
   --color-white:          #FDFAF6;
   --color-olive:          #5e8900;
-  --color-olive-dark:     #4d7000;
   --color-olive-light:    #cef38b;
   --color-muted:          #8C7B6B;
   --color-border:         #D4C9B8;
@@ -1319,7 +1318,7 @@ body.has-banner .sub-hero {
 }
 
 .footer-container {
-  background-color: var(--color-olive-dark) !important; /* Vert 2 Dark: #4d7000 for WCAG AA contrast compliance */
+  background-color: var(--color-olive) !important; /* Vert 2: #5e8900 */
   border-radius: 40px !important; /* Very rounded corners matching mockup */
   max-width: var(--container-max) !important;
   margin: 0 auto !important;
@@ -2052,8 +2051,8 @@ textarea.form-control {
 
 /* Left Yellow Side */
 .banner-left {
-  background-color: var(--color-olive-dark); /* Vert 2 Dark: #4d7000 */
-  color: var(--color-white);
+  background-color: var(--color-olive-light); /* Vert 1: #cef38b */
+  color: #1A1410;
   padding: var(--space-10) var(--space-8);
   display: flex;
   align-items: center;
@@ -2088,26 +2087,26 @@ textarea.form-control {
   font-weight: 900;
   line-height: 1.15;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: #1A1410;
   letter-spacing: -0.01em;
 }
 
 .banner-stats {
   font-family: var(--font-body);
   font-size: 15px;
-  color: rgba(253, 250, 246, 0.85);
+  color: rgba(26, 20, 16, 0.85);
   margin-bottom: var(--space-2);
 }
 
 .banner-stats strong {
-  color: var(--color-white);
+  color: #1A1410;
   font-weight: 700;
 }
 
 /* Right Light Green Side */
 .banner-right {
-  background-color: var(--color-olive-light); /* Vert 1: #cef38b */
-  color: #1A1410;
+  background-color: var(--color-olive); /* Vert 2: #5e8900 */
+  color: var(--color-white);
   padding: var(--space-10) var(--space-8);
   display: flex;
   flex-direction: column;
@@ -2128,14 +2127,14 @@ textarea.form-control {
   font-weight: 900;
   line-height: 1.15;
   text-transform: uppercase;
-  color: #1A1410;
+  color: var(--color-white);
   letter-spacing: -0.01em;
 }
 
 .banner-input-wrapper {
   width: 100%;
   max-width: 320px;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: var(--color-white); /* Fully opaque white for contrast on dark background */
   border: 1.5px solid rgba(26, 20, 16, 0.18);
   border-radius: var(--radius-full);
   padding: 10px 18px;
@@ -2146,7 +2145,7 @@ textarea.form-control {
 
 .banner-input-wrapper:focus-within {
   border-color: rgba(26, 20, 16, 0.6);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .banner-input {
@@ -2170,7 +2169,7 @@ textarea.form-control {
 
 .banner-right-text {
   font-size: 12px;
-  color: rgba(26, 20, 16, 0.7);
+  color: rgba(253, 250, 246, 0.85); /* Fully opaque off-white with opacity for dark background */
   max-width: 300px;
   line-height: 1.4;
 }
