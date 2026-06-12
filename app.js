@@ -191,7 +191,19 @@ function initDonationForm() {
   const customInput = document.getElementById('donation-custom');
   const toggleBtns = form.querySelectorAll('.donation-toggle-btn');
   const typeInput = document.getElementById('donation-type'); // Hidden input
-  const submitBtn = form.querySelector('button[type="submit"]');
+  
+  // Step containers
+  const step1 = form.querySelector('#donation-step-1');
+  const step2 = form.querySelector('#donation-step-2');
+  const step3 = form.querySelector('#donation-step-3');
+
+  // Navigation buttons
+  const btnGoToStep2 = form.querySelector('#btn-go-to-step-2');
+  const btnBackToStep1 = form.querySelector('#btn-back-to-step-1');
+  const btnGoToStep3 = form.querySelector('#btn-go-to-step-3');
+  const btnBackToStep2 = form.querySelector('#btn-back-to-step-2');
+
+  const finalSubmitBtn = form.querySelector('button[type="submit"]');
 
   let selectedAmount = '5000'; // Default preset value
 
@@ -229,16 +241,108 @@ function initDonationForm() {
     const amountStr = selectedAmount ? (+selectedAmount).toLocaleString('fr-FR') + ' FCFA' : '';
     const frequencyStr = typeVal === 'mensuel' ? ' / mois' : '';
     
-    if (submitBtn) {
+    // Update button in Step 2
+    if (btnGoToStep3) {
       if (amountStr) {
-        submitBtn.textContent = `Faire un don de ${amountStr}${frequencyStr} →`;
+        btnGoToStep3.textContent = `Faire un don de ${amountStr}${frequencyStr} →`;
       } else {
-        submitBtn.textContent = 'Faire un don →';
+        btnGoToStep3.textContent = 'Continuer →';
+      }
+    }
+
+    // Update instruction amount strings in Step 3
+    const confirmAmountEls = form.querySelectorAll('.confirm-amount');
+    confirmAmountEls.forEach(el => {
+      el.textContent = amountStr || '0 FCFA';
+    });
+
+    // Update final submit button in Step 3
+    if (finalSubmitBtn) {
+      if (amountStr) {
+        finalSubmitBtn.textContent = `Confirmer mon transfert de ${amountStr}${frequencyStr} →`;
+      } else {
+        finalSubmitBtn.textContent = 'Confirmer mon transfert →';
       }
     }
   }
 
   updateSubmitText();
+
+  // Navigation Logic
+  if (btnGoToStep2 && step1 && step2) {
+    btnGoToStep2.addEventListener('click', () => {
+      // Validate step 1 amount
+      if (!selectedAmount || isNaN(selectedAmount) || +selectedAmount <= 0) {
+        alert('Veuillez sélectionner ou saisir un montant de don valide.');
+        return;
+      }
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+    });
+  }
+
+  if (btnBackToStep1 && step1 && step2) {
+    btnBackToStep1.addEventListener('click', () => {
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+    });
+  }
+
+  // Handle radio buttons select style
+  const methodLabels = form.querySelectorAll('.payment-method-label');
+  methodLabels.forEach(label => {
+    const radio = label.querySelector('input[type="radio"]');
+    if (radio) {
+      radio.addEventListener('change', () => {
+        methodLabels.forEach(l => l.classList.remove('active'));
+        if (radio.checked) {
+          label.classList.add('active');
+        }
+      });
+    }
+  });
+
+  if (btnGoToStep3 && step2 && step3) {
+    btnGoToStep3.addEventListener('click', () => {
+      // Validate coordinates in Step 2
+      const nameInput = form.querySelector('#donation-name');
+      const emailInput = form.querySelector('#donation-email');
+      
+      if (!nameInput.value.trim() || !emailInput.value.trim()) {
+        alert('Veuillez renseigner votre nom complet et votre adresse email.');
+        return;
+      }
+
+      // Check selected payment method
+      const selectedMethodRadio = form.querySelector('input[name="payment_method"]:checked');
+      if (!selectedMethodRadio) {
+        alert('Veuillez sélectionner un moyen de paiement.');
+        return;
+      }
+
+      const method = selectedMethodRadio.value;
+
+      // Show the matching instruction block in Step 3
+      form.querySelectorAll('.payment-instruction').forEach(el => {
+        el.classList.add('hidden');
+      });
+
+      const targetInstruction = form.querySelector(`#instruction-${method}`);
+      if (targetInstruction) {
+        targetInstruction.classList.remove('hidden');
+      }
+
+      step2.classList.add('hidden');
+      step3.classList.remove('hidden');
+    });
+  }
+
+  if (btnBackToStep2 && step2 && step3) {
+    btnBackToStep2.addEventListener('click', () => {
+      step3.classList.add('hidden');
+      step2.classList.remove('hidden');
+    });
+  }
 
   // Check URL amount parameter on load
   const urlParams = new URLSearchParams(window.location.search);
@@ -301,7 +405,28 @@ function initForms() {
             if (idx === 0) b.classList.add('active');
           });
           const submitBtnDonation = form.querySelector('button[type="submit"]');
-          if (submitBtnDonation) submitBtnDonation.textContent = 'Faire un don de 5 000 FCFA →';
+          if (submitBtnDonation) submitBtnDonation.textContent = 'Confirmer mon transfert de 5 000 FCFA →';
+        }
+
+        // Reset multi-step form to step 1
+        const step1 = form.querySelector('#donation-step-1');
+        const step2 = form.querySelector('#donation-step-2');
+        const step3 = form.querySelector('#donation-step-3');
+        if (step1 && step2 && step3) {
+          step1.classList.remove('hidden');
+          step2.classList.add('hidden');
+          step3.classList.add('hidden');
+          
+          // Reset payment method selection styling
+          const methodLabels = form.querySelectorAll('.payment-method-label');
+          methodLabels.forEach((l, idx) => {
+            l.classList.remove('active');
+            if (idx === 0) {
+              l.classList.add('active');
+              const radio = l.querySelector('input[type="radio"]');
+              if (radio) radio.checked = true;
+            }
+          });
         }
 
         // Show Toast notification

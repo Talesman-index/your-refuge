@@ -8,12 +8,22 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="main.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Metadata Open Graph (Réseaux Sociaux) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Participer — The Refuge">
+  <meta property="og:description" content="Soutenez l'action humanitaire de The Refuge à Cotonou : faites un don en ligne, devenez bénévole ou associez votre organisation à notre cause.">
+  <meta property="og:image" content="images/share_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Participer — The Refuge">
+  <meta name="twitter:description" content="Soutenez l'action humanitaire de The Refuge à Cotonou : faites un don en ligne, devenez bénévole ou associez votre organisation à notre cause.">
+  <meta name="twitter:image" content="images/share_preview.png">
 </head>
 <body>
 
   <!-- Notification Banner -->
   <div class="top-banner" id="top-banner">
-    <span class="top-banner-text"><i class="ph-bold ph-megaphone" style="margin-right: 6px; font-size: 14px; vertical-align: -1px; color: var(--color-coral);"></i> The Refuge a distribué 1 240+ repas ce mois-ci à Cotonou — <a href="impact.html">Voir l'impact</a></span>
+    <span class="top-banner-text"><i class="ph-bold ph-megaphone" style="margin-right: 6px; font-size: 14px; vertical-align: -1px; color: var(--color-coral);"></i> The Refuge a distribué 1 240+ vêtements ce mois-ci à Cotonou — <a href="impact.html">Voir l'impact</a></span>
     <button class="top-banner-close" id="close-banner">&times;</button>
   </div>
 
@@ -91,7 +101,7 @@
             
             <div>
               <p class="text-label">SOUTIEN FINANCIER</p>
-              <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Chaque don se transforme en repas et en soin.</h2>
+              <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Chaque don se transforme en tenues et en soin.</h2>
               <p style="margin-bottom: var(--space-4);">Votre don permet d'acheter directement les ingrédients de nos maraudes et de soutenir les projets de réinsertion professionnelle de nos bénéficiaires les plus stables.</p>
               
               <div class="verset-card" style="margin-bottom: var(--space-6);">
@@ -99,11 +109,26 @@
                 <span class="verset-ref">2 Corinthiens 9:7</span>
               </div>
 
+
+              <div class="contact-info-card" style="border-radius: var(--radius-lg); padding: var(--space-5); margin-bottom: var(--space-4);">
+                <i class="ph ph-gift" style="font-size: 28px; color: var(--color-coral); margin-top: 3px;"></i>
+                <div>
+                  <h3 style="font-family: var(--font-body); font-size: 16px; font-weight: 700; color: var(--color-coral); margin-bottom: var(--space-1);">Don Physique & Matériel</h3>
+                  <p style="font-size: 13px; color: var(--color-muted); line-height: 1.5; margin-bottom: var(--space-3);">
+                    Pour offrir des vêtements, des matelas, des kits d'hygiène ou du matériel, coordonnez avec notre équipe :
+                  </p>
+                  <a href="https://wa.me/33611678902" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: var(--space-2); padding: 10px 20px; border-radius: var(--radius-full); font-size: 13px; font-weight: 700; background-color: #25D366; color: white; border: none; cursor: pointer; text-decoration: none;">
+                    <i class="ph ph-whatsapp-logo" style="font-size: 18px;"></i>
+                    <span>WHATSAPP : 0611678902</span>
+                  </a>
+                </div>
+              </div>
+
               <div class="contact-info-card" style="border-radius: var(--radius-md); padding: var(--space-4);">
                 <i class="ph ph-shield-check" style="font-size: 24px; color: var(--color-success); margin-top: 3px;"></i>
                 <div>
-                  <h3 style="font-family: var(--font-body); font-size: 14px; font-weight: 600;">Paiement sécurisé et local</h3>
-                  <p style="font-size: 13px; color: var(--color-muted);">En envoyant ce formulaire, vous serez redirigé vers notre plateforme sécurisée pour finaliser par Mobile Money (MTN, Moov) ou carte bancaire.</p>
+                  <h3 style="font-family: var(--font-body); font-size: 14px; font-weight: 600;">Simulation de promesse en ligne</h3>
+                  <p style="font-size: 13px; color: var(--color-muted);">Vous pouvez aussi remplir le formulaire à droite pour simuler une promesse de don.</p>
                 </div>
               </div>
             </div>
@@ -113,41 +138,113 @@
               <form id="donation-form" class="interactive-form">
                 <input type="hidden" name="donation_type" id="donation-type" value="unique">
                 
-                <div class="form-group text-center">
-                  <label class="form-label" style="margin-bottom: var(--space-3);">Type de soutien</label>
-                  <div class="donation-toggle">
-                    <button type="button" class="donation-toggle-btn active" data-type="unique">Don unique</button>
-                    <button type="button" class="donation-toggle-btn" data-type="mensuel">Don mensuel</button>
+                <!-- Étape 1 : Choix du montant -->
+                <div class="donation-step" id="donation-step-1">
+                  <div class="form-group text-center">
+                    <label class="form-label" style="margin-bottom: var(--space-3);">Type de soutien</label>
+                    <div class="donation-toggle">
+                      <button type="button" class="donation-toggle-btn active" data-type="unique">Don unique</button>
+                      <button type="button" class="donation-toggle-btn" data-type="mensuel">Don mensuel</button>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label class="form-label">Sélectionnez un montant (FCFA)</label>
-                  <div class="donation-grid">
-                    <button type="button" class="donation-preset-btn" data-amount="1000">1 000</button>
-                    <button type="button" class="donation-preset-btn" data-amount="2500">2 500</button>
-                    <button type="button" class="donation-preset-btn active" data-amount="5000">5 000</button>
-                    <button type="button" class="donation-preset-btn" data-amount="10000">10 000</button>
+                  <div class="form-group">
+                    <label class="form-label">Sélectionnez un montant (FCFA)</label>
+                    <div class="donation-grid">
+                      <button type="button" class="donation-preset-btn" data-amount="1000">1 000</button>
+                      <button type="button" class="donation-preset-btn" data-amount="2500">2 500</button>
+                      <button type="button" class="donation-preset-btn active" data-amount="5000">5 000</button>
+                      <button type="button" class="donation-preset-btn" data-amount="10000">10 000</button>
+                    </div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="donation-custom">Ou saisir un montant libre (FCFA)</label>
+                    <input type="number" class="form-control" id="donation-custom" placeholder="Saisir un montant...">
+                  </div>
+
+                  <button type="button" class="btn btn-primary" id="btn-go-to-step-2" style="width: 100%; margin-top: var(--space-4);">Continuer →</button>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="donation-custom">Ou saisir un montant libre (FCFA)</label>
-                  <input type="number" class="form-control" id="donation-custom" placeholder="Saisir un montant...">
+                <!-- Étape 2 : Coordonnées & Moyen de Paiement -->
+                <div class="donation-step hidden" id="donation-step-2">
+                  <div style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: 8px;">
+                    <button type="button" id="btn-back-to-step-1" style="background: none; border: none; cursor: pointer; color: var(--color-primary); font-size: 16px; display: flex; align-items: center;"><i class="ph ph-arrow-left"></i></button>
+                    <span style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: var(--color-muted); letter-spacing: 0.05em;">Étape 2 sur 3</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="donation-name">Nom complet</label>
+                    <input type="text" class="form-control" id="donation-name" required placeholder="Votre nom complet...">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="donation-email">Adresse e-mail</label>
+                    <input type="email" class="form-control" id="donation-email" required placeholder="votre.email@adresse.com">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Moyen de paiement</label>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-1);">
+                      <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 1.5px solid var(--color-border); border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 14px;" class="payment-method-label active">
+                        <input type="radio" name="payment_method" value="momo" checked style="accent-color: var(--color-primary);">
+                        <span>MTN Mobile Money (MoMo)</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 1.5px solid var(--color-border); border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 14px;" class="payment-method-label">
+                        <input type="radio" name="payment_method" value="paypal" style="accent-color: var(--color-primary);">
+                        <span>PayPal</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); border: 1.5px solid var(--color-border); border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 14px;" class="payment-method-label">
+                        <input type="radio" name="payment_method" value="taptap" style="accent-color: var(--color-primary);">
+                        <span>Taptap Send</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary" id="btn-go-to-step-3" style="width: 100%; margin-top: var(--space-4);">Continuer →</button>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="donation-name">Nom complet</label>
-                  <input type="text" class="form-control" id="donation-name" required placeholder="Votre nom complet...">
+                <!-- Étape 3 : Instructions & Validation -->
+                <div class="donation-step hidden" id="donation-step-3">
+                  <div style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: 8px;">
+                    <button type="button" id="btn-back-to-step-2" style="background: none; border: none; cursor: pointer; color: var(--color-primary); font-size: 16px; display: flex; align-items: center;"><i class="ph ph-arrow-left"></i></button>
+                    <span style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: var(--color-muted); letter-spacing: 0.05em;">Étape 3 sur 3</span>
+                  </div>
+
+                  <div class="instructions-box" style="background-color: var(--color-ivory); padding: var(--space-5); border-radius: 16px; border: 1.5px solid var(--color-border); margin-bottom: var(--space-4);">
+                    <div id="instruction-momo" class="payment-instruction">
+                      <h4 style="font-family: var(--font-body); font-size: 14px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; text-transform: uppercase;"><i class="ph ph-phone" style="vertical-align: middle; margin-right: 4px;"></i> MTN MoMo</h4>
+                      <p style="font-size: 13px; line-height: 1.4; color: var(--color-charcoal); margin-bottom: var(--space-3);">Pour finaliser votre don de <strong class="confirm-amount">5 000 FCFA</strong>, veuillez effectuer un transfert direct :</p>
+                      <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--color-charcoal); display: flex; flex-direction: column; gap: var(--space-1);">
+                        <li>Numéro : <strong>+229 01 62 34 91 93</strong></li>
+                        <li>Titulaire : <strong>AHYITE MARINA</strong></li>
+                      </ul>
+                    </div>
+
+                    <div id="instruction-paypal" class="payment-instruction hidden">
+                      <h4 style="font-family: var(--font-body); font-size: 14px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; text-transform: uppercase;"><i class="ph ph-paypal-logo" style="vertical-align: middle; margin-right: 4px;"></i> PayPal</h4>
+                      <p style="font-size: 13px; line-height: 1.4; color: var(--color-charcoal); margin-bottom: var(--space-3);">Pour finaliser votre don de <strong class="confirm-amount">5 000 FCFA</strong> via PayPal, veuillez envoyer le paiement à :</p>
+                      <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--color-charcoal); display: flex; flex-direction: column; gap: var(--space-1);">
+                        <li>Compte : <strong>+229 01 62 34 91 93</strong></li>
+                        <li>Nom : <strong>AHYITE MARINA</strong></li>
+                      </ul>
+                    </div>
+
+                    <div id="instruction-taptap" class="payment-instruction hidden">
+                      <h4 style="font-family: var(--font-body); font-size: 14px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; text-transform: uppercase;"><i class="ph ph-paper-plane" style="vertical-align: middle; margin-right: 4px;"></i> Taptap Send</h4>
+                      <p style="font-size: 13px; line-height: 1.4; color: var(--color-charcoal); margin-bottom: var(--space-3);">Pour finaliser votre don de <strong class="confirm-amount">5 000 FCFA</strong> via Taptap Send, veuillez transférer à :</p>
+                      <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--color-charcoal); display: flex; flex-direction: column; gap: var(--space-1);">
+                        <li>Numéro : <strong>+229 01 62 34 91 93</strong></li>
+                        <li>Titulaire : <strong>AHYITE MARINA</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <p style="font-size: 11px; color: var(--color-muted); text-align: center; margin-bottom: var(--space-4);"><i class="ph ph-info" style="vertical-align: -1px; margin-right: 4px;"></i> Cliquez sur le bouton ci-dessous une fois le transfert envoyé pour confirmer.</p>
+                  
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">Confirmer mon transfert de 5 000 FCFA →</button>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="donation-email">Adresse e-mail</label>
-                  <input type="email" class="form-control" id="donation-email" required placeholder="votre.email@adresse.com">
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-4);">Faire un don de 5 000 FCFA →</button>
-                
                 <div class="donation-note">
                   <i class="ph ph-lock"></i>
                   <span>Vos informations personnelles sont sécurisées.</span>
@@ -165,7 +262,7 @@
             <div>
               <p class="text-label">ENGAGEMENT HUMAIN</p>
               <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-4);">Rejoignez notre équipe de terrain à Cotonou.</h2>
-              <p style="margin-bottom: var(--space-4);">Nos bénévoles sont les mains et les pieds de The Refuge. Que vous sachiez cuisiner, que vous soyez doué pour l'écoute active, ou que vous aimiez trier et organiser des collectes, il y a une place pour vous dans notre équipe.</p>
+              <p style="margin-bottom: var(--space-4);">Nos bénévoles sont les mains et les pieds de The Refuge. Que vous aimiez trier des vêtements, que vous soyez doué pour l'écoute active, ou que vous aimiez organiser des collectes, il y a une place pour vous dans notre équipe.</p>
               
               <div class="verset-card" style="margin-bottom: var(--space-6);">
                 <p class="text-verset" style="font-size: 16px;">"Servez-vous les uns les autres par amour."</p>
@@ -220,7 +317,7 @@
                   <label class="form-label">Domaine d'action souhaité</label>
                   <div style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-1);">
                     <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
-                      <input type="radio" name="vol_domain" value="cuisine" checked> Préparation des repas (cuisine)
+                      <input type="radio" name="vol_domain" value="tri" checked> Tri et préparation des tenues (vêtements)
                     </label>
                     <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
                       <input type="radio" name="vol_domain" value="terrain"> Distribution sur le terrain (maraudes)
@@ -229,7 +326,7 @@
                       <input type="radio" name="vol_domain" value="ecoute"> Écoute active et soutien psycho-spirituel
                     </label>
                     <label style="display: flex; align-items: center; gap: var(--space-2); font-size: 14px;">
-                      <input type="radio" name="vol_domain" value="tri"> Tri de vêtements et collectes
+                      <input type="radio" name="vol_domain" value="logistique"> Collectes et logistique terrain
                     </label>
                   </div>
                 </div>
@@ -298,7 +395,7 @@
                   <label class="form-label" for="partner-type">Type de partenariat envisagé</label>
                   <select class="form-control" id="partner-type">
                     <option value="financement">Soutien financier / Parrainage de projet</option>
-                    <option value="dons-nature">Mise à disposition de matériel ou denrées (dons en nature)</option>
+                    <option value="dons-nature">Mise à disposition de matériel ou de vêtements (dons en nature)</option>
                     <option value="competences">Mécénat de compétences (médical, psy, juridique)</option>
                     <option value="eglise">Partenariat église (mobilisation de bénévoles, cultes conjoints)</option>
                   </select>
@@ -366,10 +463,10 @@
           <div class="footer-social-section">
             <h3>Suivez-nous sur les réseaux</h3>
             <div class="footer-social-icons">
-              <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+              <a href="https://www.facebook.com/therefuge" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="https://www.instagram.com/therefuge" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="https://www.tiktok.com/@therefuge" target="_blank" class="footer-social-btn" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+              <a href="https://www.linkedin.com/company/therefuge" target="_blank" class="footer-social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
             </div>
           </div>
         </div>

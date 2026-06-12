@@ -108,6 +108,9 @@
   --transition-base:   250ms ease;
   --transition-slow:   400ms ease;
   --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Sticky Header Offset for scrolling content */
+  --header-offset: 96px;
 }
 
 /* Reset & Base Styles */
@@ -120,6 +123,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-offset) + 24px);
 }
 
 body {
@@ -402,6 +406,9 @@ h5 {
 }
 
 /* Push header down when top banner is active */
+body.has-banner {
+  --header-offset: 132px;
+}
 body.has-banner .header {
   top: 36px;
 }
@@ -663,6 +670,15 @@ body.has-banner .sub-hero {
   transform: translateY(-36px);
   opacity: 0;
   pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.payment-method-label.active {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-ivory) !important;
 }
 
 .top-banner-text a {
@@ -1675,6 +1691,7 @@ body.has-banner .sub-hero {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: calc(var(--header-offset) + 24px);
 }
 
 .tab-buttons {
